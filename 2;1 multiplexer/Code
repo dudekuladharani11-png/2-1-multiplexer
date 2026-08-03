@@ -1,0 +1,19 @@
+
+---
+
+## ⚙️ How It Works
+- Inputs: `A`, `B` (data inputs), `S` (select line)  
+- Output: `Y` (selected input)  
+- Logic:  
+  - If `S=0` → `Y=A`  
+  - If `S=1` → `Y=B`  
+
+---
+
+## 🧪 Simulation
+Run the following commands:
+
+```bash
+iverilog -o mux2to1_tb tb/mux2to1_tb.v src/mux2to1.v
+vvp mux2to1_tb
+gtkwave sim/mux2to1.vcd
